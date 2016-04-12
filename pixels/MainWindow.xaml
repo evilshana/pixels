@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pixels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="480" Width="640">
+    <DockPanel>
+      
+      <Grid DockPanel.Dock="Top">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Task" Click="Button_Click_1" Grid.Column="0"/>
+        <Button Content="Enumerable" Click="Button_Click_2" Grid.Column="1"/>
+        <Button Content="Observable" Click="Button_Click_3" Grid.Column="2"/>
+      </Grid>
+    
+      <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+        <DockPanel x:Name="log" Margin="5">
+          
+        </DockPanel>
+      </ScrollViewer>
+      
+      <Canvas x:Name="canvas">
+      </Canvas>
+    </DockPanel>
 </Window>
